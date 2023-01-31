@@ -1,5 +1,6 @@
 import 'package:formz/formz.dart';
 
+/// Tells name validation error type
 enum NameValidationError { empty, invalid }
 
 class Name extends FormzInput<String, NameValidationError> {
@@ -16,7 +17,7 @@ class Name extends FormzInput<String, NameValidationError> {
       return null;
     }
   }
-
+  /// Tells validation error message for username
   static String? showNameErrorMessage(NameValidationError? error) {
     if (error == NameValidationError.empty) {
       return "Empty name";

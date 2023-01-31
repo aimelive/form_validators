@@ -1,5 +1,6 @@
 import 'package:form_validators/form_validators.dart';
 
+/// Tells email validation error type
 enum EmailValidatorError { empty, invalid }
 
 const String _kEmailPattern =
@@ -21,7 +22,7 @@ class Email extends FormzInput<String, EmailValidatorError> {
       return EmailValidatorError.invalid;
     }
   }
-
+  /// Tells validation error message for email
   static String? showEmailErrorMessage(EmailValidatorError? error) {
     if (error == EmailValidatorError.empty) {
       return "Empty email";

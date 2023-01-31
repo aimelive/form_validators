@@ -1,5 +1,6 @@
 import 'package:formz/formz.dart';
 
+/// Tells password validation error type
 enum PasswordValidatorError { empty, invalid }
 
 class Password extends FormzInput<String, PasswordValidatorError> {
@@ -16,7 +17,7 @@ class Password extends FormzInput<String, PasswordValidatorError> {
       return null;
     }
   }
-
+  /// Tells validation error message for password
   static String? showPasswordErrorMessage(PasswordValidatorError? error) {
     if (error == PasswordValidatorError.empty) {
       return "Empty password";
